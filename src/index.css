@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+.heroHeading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+body{
+
+}
+
+.cursor-dot{
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  will-change: transform;
+}
+
+.cursor-outline{
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 998;
+  will-change: transform;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+/* Remove old cursor styles that are no longer needed */
+.cursor-dot, .cursor-outline{
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-outline {
+    display: none;
+  }
+}
+
+.mar{
+
+  margin-top: -100px;
+  margin-bottom: -150px;
+  margin-left: -20px;
+
+}
+
+/* 
+@keyframes appear {
+ from{
+    opacity: 0;
+   
+    transform: translateX(-100px);
+ }
+ to{
+    opacity: 1;
+  
+    transform: translateX(0px);
+  }
+ }
+  
+
+
+.block{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+} */
